@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::namespace('Api')->name('api.')->group(function() {
    
-    Route::resource('tasksu', 'TasksController')->only([
+    Route::resource('tasks', 'TasksController')->only([
         'index', 'store','update'
     ]);
     
