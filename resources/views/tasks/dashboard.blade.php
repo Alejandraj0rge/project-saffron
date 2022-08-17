@@ -10,11 +10,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Hello, world!</h1>
+    <h1 id="header"></h1>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <div id="app">
-        {{-- <example-component></example-component> --}}
-        <side-menu></side-menu>
+        <div class="row">
+            <div class="col-md-auto">
+                <side-menu></side-menu>
+            </div>
+            <div class="col-lg-4">
+                <div class="container-lg">
+                    <div class="row">
+                        <div class="col">
+                            <main-card></main-card> 
+                            <main-card></main-card> 
+                        </div>
+                        <div class="col">
+                            <main-card></main-card> 
+                            <main-card></main-card> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div> 
 </body>
 
