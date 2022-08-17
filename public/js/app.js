@@ -1951,7 +1951,7 @@ var links = {
   data: function data() {
     var option = "";
     Object.keys(links).forEach(function (sectionName) {
-      option += "<div>".concat(links[sectionName], "<a href=\"\">").concat(sectionName, "</a><hr class=\"solid\"></div>");
+      option += "<li class=\"list-group-item\">".concat(links[sectionName], "<a href=\"\"> ").concat(sectionName, "</a></li>");
     });
     return {
       options: option
@@ -2006,7 +2006,11 @@ var staticRenderFns = [function () {
     attrs: {
       href: "#"
     }
-  }, [_vm._v("Another link")])])]);
+  }, [_vm._v("Another link")])]), _vm._v(" "), _c("div", {
+    staticClass: "card-footer"
+  }, [_c("small", {
+    staticClass: "text-muted"
+  }, [_vm._v("Last updated 3 mins ago")])])]);
 }];
 render._withStripped = true;
 
@@ -2061,12 +2065,13 @@ var render = function render() {
       id: "collapseWidthExample"
     }
   }, [_c("div", {
-    staticClass: "card card-body",
+    staticClass: "card",
     staticStyle: {
-      width: "200px",
-      height: "400px"
+      width: "18rem"
     }
-  }, [_c("div", [_c("span", {
+  }, [_c("ul", {
+    staticClass: "list-group list-group-flush"
+  }, [_c("span", {
     domProps: {
       innerHTML: _vm._s(_vm.options)
     }

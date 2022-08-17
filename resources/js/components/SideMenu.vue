@@ -8,11 +8,17 @@
 
         <div style="min-height: 120px;">
             <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                <div class="card card-body" style="width: 200px;height: 400px;">
+                <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                        <span v-html="options"></span>
+                    </ul>
+                </div>
+
+                <!-- <div class="card card-body" style="width: 200px;height: 400px;">
                     <div>
                         <span v-html="options"></span>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -36,7 +42,7 @@ import { execPath } from 'process';
         data() {
             var option = "";
                 Object.keys(links).forEach((sectionName) => {
-                    option += `<div>${links[sectionName]}<a href="">${sectionName}</a><hr class="solid"></div>`;
+                    option += `<li class="list-group-item">${links[sectionName]}<a href=""> ${sectionName}</a></li>`;
                 });
 
             return {
