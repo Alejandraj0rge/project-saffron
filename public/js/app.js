@@ -2032,30 +2032,25 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("button", {
-    staticClass: "btn btn-primary",
+  return _c("div", [_c("svg", {
+    staticClass: "bi bi-list",
     attrs: {
-      type: "button",
+      xmlns: "http://www.w3.org/2000/svg",
+      width: "24",
+      height: "24",
+      fill: "currentColor",
+      viewBox: "0 0 16 16",
       "data-bs-toggle": "collapse",
       "data-bs-target": "#collapseWidthExample",
       "aria-expanded": "false",
       "aria-controls": "collapseWidthExample"
-    }
-  }, [_c("svg", {
-    staticClass: "bi bi-list",
-    attrs: {
-      xmlns: "http://www.w3.org/2000/svg",
-      width: "16",
-      height: "16",
-      fill: "currentColor",
-      viewBox: "0 0 16 16"
     }
   }, [_c("path", {
     attrs: {
       "fill-rule": "evenodd",
       d: "M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
     }
-  })])]), _vm._v(" "), _c("div", {
+  })]), _vm._v(" "), _c("div", {
     staticStyle: {
       "min-height": "120px"
     }

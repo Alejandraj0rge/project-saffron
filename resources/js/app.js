@@ -21,6 +21,7 @@ window.Vue = require('vue');
 Vue.component('main-card', require('./components/MainCard.vue').default);
 Vue.component('side-menu', require('./components/SideMenu.vue').default);
 
+
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
