@@ -18,6 +18,7 @@ window.Vue = require('vue');
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+Vue.component('top-header', require('./components/Header.vue').default);
 Vue.component('main-card', require('./components/MainCard.vue').default);
 Vue.component('side-menu', require('./components/SideMenu.vue').default);
 

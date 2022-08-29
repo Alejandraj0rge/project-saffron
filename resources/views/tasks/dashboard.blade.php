@@ -8,117 +8,147 @@
     <title>Document</title>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+	<link href="\project_saffron\resources\sass\app.css" rel="stylesheet">
+
+	
 </head>
 <body>
     <h1 id="header"></h1>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
-    <div id="app">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-		<div class="row flex-nowrap justify-content-between align-items-center">
+    <div id="app" style="display: flex;">
 
-			<div class="col-4 text-center">
+		<div id="side-bar" class="shadow mb-5 bg-body rounded" style="display: flex;flex-direction:column;align-items:flex-start;height:99vh;width:250px;justify-content:space-between;">
+			<div style="width:100%;" id="menu">
 
-				<H1>Title</H1>
-
-			</div>
-
-			<div class="col-4 text-center">
-
-				<button type="button" class="btn btn-primary position-relative">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
-						<path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
-					</svg>
-					<span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
-						<span class="visually-hidden">New alerts</span>
-					</span>
-				</button>
-				
-
-
-				<button class="btn btn-dark">Log out</button>
-
-				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-emoji-sunglasses-fill" viewBox="0 0 16 16">
-					<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v.116A4.22 4.22 0 0 1 8 5c.35 0 .69.04 1 .116V5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-1.994-1.839A2.99 2.99 0 0 0 8 6c-.393 0-.74.064-1.006.161A2 2 0 0 1 5 8h-.438a2 2 0 0 1-1.94-1.515L2.31 5.243zM4.969 9.75A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .866-.5z"/>
-				</svg>
-
-			</div>
-
-		</div> 
-
-		<div class="row row-cols-3">
-
-			<div class="col-md-auto" style="padding-left: 35px;">
-				<side-menu></side-menu>
-			</div>
-
-        	<div class="col-md-5">
-				<div class="card" data-masonry='{"percentPosition": true }' style="position: relative;padding:10px;">
-					
-					<div class="card" style="width: 18rem;">
-						<div class="card-body">
-						  <h5 class="card-title">Card title</h5>
-						  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-						  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						</div>
-					</div>
-
-					<div class="card" style="width: 18rem;">
-						<div class="card-body">
-						  <h5 class="card-title">Card title</h5>
-						  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-						  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						</div>
-					</div>
-
-					<div class="card" style="width: 18rem;">
-						<div class="card-body">
-						  <h5 class="card-title">Card title</h5>
-						  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-						  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						</div>
-					</div>
-
-					<div class="card" style="width: 18rem;">
-						<div class="card-body">
-						  <h5 class="card-title">Card title</h5>
-						  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-						  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						</div>
-					</div>
-
+				<div id="title" style="justify-content: space-between;display:flex;width:100%;padding:20px;align-items:center;">Title <span class="material-icons" style="">menu</span></div>
+				<div>
+					<ul style="list-style-type:none;align-items:flex-start;display:flex;flex-direction:column;font:medium;">
+						<li><span class="material-icons">home</span>Home</li>
+						<li><span class="material-icons">home</span>My Tasks</li>
+						<li><span class="material-icons">home</span>Inbox</li>
+						<li><span class="material-icons">home</span>Reporting</li>
+						<li><span class="material-icons">home</span>Portfolios</li>
+						<li><span class="material-icons">home</span>Goals</li>
+					</ul>
 				</div>
-          	</div>
+				<hr>
+					<div style="padding-left:2rem;">Favorites</div>
+				<hr>
+					<div style="padding-left:2rem;">saved searches</div>
+				<hr>
+					<div style="padding-left:2rem;">teams</div>
+				<hr>
+					<div style="padding-left:2rem;">Browse teams</div>
 
-			<div class="col-lg-6">
-                <div class="card"  style="height:800px;padding:20px;" data-masonry='{"percentPosition": true }'>
-					<div class="row row-cols-2">
-						<div class="col-md-auto">
+			</div>
 
-							<div class="card" style="width: 18rem;height:30rem" >
-								<div class="card-body">
-								  <h5 class="card-title" contenteditable="true">New Note</h5>
-								  <h6 class="card-subtitle mb-2 text-muted" contenteditable="true">Note subtitle</h6>
-								  <p class="card-text" contenteditable="true">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-								</div>
-								<div class="card-footer">
-									
+			<div style="width:100%;">
+				<hr>
+					<div style="padding-left:2rem;">Invite teammates</div>
+				<hr>
+					<div style="padding-left:2rem;">Help</div>
+				<hr>
+			</div>
+			
+		</div>
+
+		<div id="main" style="width:100%">
+			<div style="display: flex; justify-content:space-between;">
+				<h4>Home</h4>
+				<div>
+					<input type="text" placeholder="Search">
+					<button>Upgrade</button>
+					<button>+</button>
+				</div>
+			</div>
+			<div style="display: flex;justify-content:center;flex-direction:column;text-align:center;margin:30px;">
+				Monday, August 29
+				<h2>Good afternoon, Alejandra</h2>
+				<div>
+					<div style="display:flex; flex-direction: row;justify-content:center;">
+						<div>My week</div>
+						<div>0 tasks completed</div>
+						<div>0 collaborators</div>
+					</div>
+					<div>Customize</div>
+				</div>
+			</div>
+			<div>
+				<div>
+					<div class="card">
+						GHGH
+					</div>
+					<div class="card">
+						FDGFG
+					</div>
+				</div>
+				<div class="card">
+					DFGF
+				</div>
+			</div>
+		</div>
+		{{-- <top-header></top-header> --}}
+		
+{{-- 		<div class="row row-cols-3" style="height:100vh;">
+			
+			<div class="col" style="padding:20px;width:max-content;padding-left:30px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;">
+				<side-menu></side-menu>
+				<ul style="list-style-type: none;margin: 0;padding: 0;">
+					<li><span class="material-icons">menu</span></li>
+					<li><span class="material-icons">check_box_outline_blank</span></li>
+					<li><span class="material-icons">radio_button_unchecked</span></li>
+						</span>
+				</ul>
+				 --}}
+				
+					{{-- <div>
+						<span class="material-symbols-outlined" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">menu</span>
+				
+						<div style="min-height: 120px;">
+							<div class="collapse collapse-horizontal" id="collapseWidthExample">
+								<div class="card" style="width:max-content;">
+									<ul class="list-group">
+										<span v-html="options"></span>
+									</ul>
 								</div>
 							</div>
-
 						</div>
-						<div class="col-md-auto">
+					</div>
+				</div> --}}
+{{-- 			</div>
 
+        	<div class="col">
+				<main-card></main-card>
+          	</div>
+
+			<div class="col-sm-6">
+                <div class="container"  style="padding:20px;" data-masonry='{"percentPosition": true }'>
+					<div class="row row-cols-2">
+
+						<div class="col-sm-auto" style="margin:10px;">
 							<div class="card" style="width: 35rem;height:30rem">
-								<div style="padding: 40px;">
+								<div class="row justify-content-center" style="padding: 40px;">
+									<div class="card" style="width: max-content;height:max-content;">
+										<div class="hstack gap-3">
+											First item
+											<div class="vr"></div>
+											0 tasks completed
+											<div class="vr"></div>
+											0 collaborators
+										</div>
+									</div>
 									<div>
-										<h3 class="text-center">My Tasks</h3>
+										<h3 class="text-center" style="padding:10px">My Tasks</h3>
 										<ul class="nav">
 											<li class="nav-item">
-											  <a class="nav-link active" aria-current="page" href="#">Active</a>
+											  <a class="nav-link active" aria-current="page" href="#">Upcoming</a>
 											</li>
 											<li class="nav-item">
-											  <a class="nav-link" href="#">Link</a>
+											  <a class="nav-link" href="#">whatt</a>
 											</li>
 											<li class="nav-item">
 											  <a class="nav-link" href="#">Link</a>
@@ -147,13 +177,35 @@
 									</div>
 								</div>
 							</div>
-
 						</div>
+						
+						<div class="col-sm-auto" style="margin:10px;">
+							<div class="card" style="width:18rem;height:30rem">
+								<div class="card-body">
+								  <h5 class="card-title" contenteditable="true">New Note</h5>
+								  <h6 class="card-subtitle mb-2 text-muted" contenteditable="true">Note subtitle</h6>
+								  <p class="card-text" contenteditable="true">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								</div>
+								<div class="card-footer d-flex justify-content-between">
+										<div class="col-4">
+											<span class="material-icons">skateboarding</span>
+											<span class="material-icons">color_lens</span>
+											<span class="material-icons">photo_camera_back</span>
+										</div>
+										
+										<div class="col-1">
+											<span class="material-icons">done_outline</span>
+										</div>
+										
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</div>
             </div>
 
-        </div>
+        </div> --}}
 
 	</div>
 </body>

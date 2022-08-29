@@ -1,26 +1,60 @@
 <template>
+    	<div id="side-bar" class="shadow mb-5 bg-body rounded" style="display: flex;flex-direction:column;align-items:flex-start;height:99vh;width:250px;justify-content:space-between;">
+			<div style="width:100%;" id="menu">
+				<div id="title">Title <span class="material-icons">menu</span></div>
+				<div>
+					<ul>
+						<li><span class="material-icons">home</span>Home</li>
+						<li><span class="material-icons">home</span>My Tasks</li>
+						<li><span class="material-icons">home</span>Inbox</li>
+						<li><span class="material-icons">home</span>Reporting</li>
+						<li><span class="material-icons">home</span>Portfolios</li>
+						<li><span class="material-icons">home</span>Goals</li>
+					</ul>
+				</div>
+				<hr>
+					<div style="padding-left:2rem;">Favorites</div>
+				<hr>
+					<div style="padding-left:2rem;">saved searches</div>
+				<hr>
+					<div style="padding-left:2rem;">teams</div>
+				<hr>
+					<div style="padding-left:2rem;">Browse teams</div>
+
+			</div>
+
+			<div style="width:100%;">
+				<hr>
+					<div style="padding-left:2rem;">Invite teammates</div>
+				<hr>
+					<div style="padding-left:2rem;">Help</div>
+				<hr>
+			</div>
+			
+		</div>
+</template>
+
+
+<!-- <template>
     <div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-        </svg>
+        <span class="material-symbols-outlined" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">menu</span>
 
         <div style="min-height: 120px;">
             <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                <div class="card" style="width: 18rem;">
-                    <ul class="list-group list-group-flush">
+                <div class="card" style="width:max-content;">
+                    <ul class="list-group">
                         <span v-html="options"></span>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-</template>
+</template> -->
 
 <script>
-import { execPath } from 'process';
 
     var links = {
-        Home:   `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/><path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/></svg>`,
+        Home:   `<span class="material-icons">vertical_split</span>`,
         Tasks:  `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sticky" viewBox="0 0 16 16"><path d="M2.5 1A1.5 1.5 0 0 0 1 2.5v11A1.5 1.5 0 0 0 2.5 15h6.086a1.5 1.5 0 0 0 1.06-.44l4.915-4.914A1.5 1.5 0 0 0 15 8.586V2.5A1.5 1.5 0 0 0 13.5 1h-11zM2 2.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .5.5V8H9.5A1.5 1.5 0 0 0 8 9.5V14H2.5a.5.5 0 0 1-.5-.5v-11zm7 11.293V9.5a.5.5 0 0 1 .5-.5h4.293L9 13.793z"/></svg>`,
         Inbox:   `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16"><path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/></svg>`,
         Reporting: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tree" viewBox="0 0 16 16"><path d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5zM6.437 4.758A.5.5 0 0 0 6 4.5h-.066L8 1.401 10.066 4.5H10a.5.5 0 0 0-.424.765L11.598 8.5H11.5a.5.5 0 0 0-.447.724L12.69 12.5H3.309l1.638-3.276A.5.5 0 0 0 4.5 8.5h-.098l2.022-3.235a.5.5 0 0 0 .013-.507z"/></svg>`,
@@ -33,7 +67,7 @@ import { execPath } from 'process';
         data() {
             var option = "";
                 Object.keys(links).forEach((sectionName) => {
-                    option += `<li class="list-group-item">${links[sectionName]}<a href=""> ${sectionName}</a></li>`;
+                    option += `<li class="list-group-item list-group-item-action">${links[sectionName]}<a> ${sectionName}</a></li>`;
                 });
 
             return {
