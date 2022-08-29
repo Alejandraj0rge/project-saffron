@@ -77,8 +77,8 @@
 					<div>Customize</div>
 				</div>
 			</div>
-			<div>
-				<div>
+			<div >
+				<div style="display:flex;justify-content:center;">
 					<div class="card">
 						GHGH
 					</div>
@@ -86,7 +86,7 @@
 						FDGFG
 					</div>
 				</div>
-				<div class="card">
+				<div class="card" style="display:flex;justify-content:center;">
 					DFGF
 				</div>
 			</div>
