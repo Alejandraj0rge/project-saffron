@@ -77,17 +77,18 @@
 					<div>Customize</div>
 				</div>
 			</div>
-			<div >
+			<div>
 				<div style="display:flex;justify-content:center;">
-					<div class="card">
+					<div class="card" style="margin: 10px;">
+						<div>My Priorities</div>
 						GHGH
 					</div>
-					<div class="card">
+					<div class="card" style="margin: 10px;">
 						FDGFG
 					</div>
 				</div>
 				<div class="card" style="display:flex;justify-content:center;">
-					DFGF
+					dffdf
 				</div>
 			</div>
 		</div>
