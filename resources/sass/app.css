@@ -12,6 +12,7 @@ li{
 
 hr{
     width: 100%;
+    margin: 0;
 }
 
 #menu{
@@ -32,4 +33,16 @@ hr{
     display:flex;
     flex-direction:column;
     font:medium;
+}
+
+.muted{
+    color: gray;
+}
+
+.project{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    background-color:cornflowerblue;
+    margin: 10px;
 }

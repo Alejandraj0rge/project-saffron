@@ -21,42 +21,42 @@
 
     <div id="app" style="display: flex;">
 
-		<div id="side-bar" class="shadow mb-5 bg-body rounded" style="display: flex;flex-direction:column;align-items:flex-start;height:99vh;width:250px;justify-content:space-between;">
+		<div id="side-bar" class="shadow bg-body rounded" style="display: flex;flex-direction:column;align-items:flex-start;height:99vh;width:250px;justify-content:space-between;">
 			<div style="width:100%;" id="menu">
-
 				<div id="title" style="justify-content: space-between;display:flex;width:100%;padding:20px;align-items:center;">Title <span class="material-icons" style="">menu</span></div>
 				<div>
 					<ul style="list-style-type:none;align-items:flex-start;display:flex;flex-direction:column;font:medium;">
 						<li><span class="material-icons">home</span>Home</li>
-						<li><span class="material-icons">home</span>My Tasks</li>
-						<li><span class="material-icons">home</span>Inbox</li>
-						<li><span class="material-icons">home</span>Reporting</li>
-						<li><span class="material-icons">home</span>Portfolios</li>
-						<li><span class="material-icons">home</span>Goals</li>
+						<li><span class="material-icons">star</span>My Tasks</li>
+						<li><span class="material-icons">notifications</span>Inbox</li>
+						<li><span class="material-icons">query_stats</span>Reporting</li>
+						<li><span class="material-icons">emoji_objects</span>Portfolios</li>
+						<li><span class="material-icons">emoji_nature</span>Goals</li>
 					</ul>
 				</div>
 				<hr>
-					<div style="padding-left:2rem;">Favorites</div>
+					<div style="padding-left:2rem;margin: 1rem 0;">Favorites</div>
 				<hr>
-					<div style="padding-left:2rem;">saved searches</div>
+					<div style="padding-left:2rem;margin: 1rem 0;">saved searches</div>
 				<hr>
-					<div style="padding-left:2rem;">teams</div>
+					<div style="padding-left:2rem;margin: 1rem 0;">teams</div>
 				<hr>
-					<div style="padding-left:2rem;">Browse teams</div>
+					<div style="padding-left:2rem;margin: 1rem 0;">Browse teams</div>
 
 			</div>
 
 			<div style="width:100%;">
 				<hr>
-					<div style="padding-left:2rem;">Invite teammates</div>
+					<div style="padding-left:2rem;margin: 1rem 0;">Invite teammates</div>
 				<hr>
-					<div style="padding-left:2rem;">Help</div>
+					<div style="padding-left:2rem;margin: 1rem 0;">Help</div>
 				<hr>
 			</div>
 			
 		</div>
 
-		<div id="main" style="width:100%">
+		<div id="main" style="width:100%;margin-left:20px;margin-right:20px;">
+			
 			<div style="display: flex; justify-content:space-between;">
 				<h4>Home</h4>
 				<div>
@@ -65,11 +65,12 @@
 					<button>+</button>
 				</div>
 			</div>
-			<div style="display: flex;justify-content:center;flex-direction:column;text-align:center;margin:30px;">
+
+			<div style="display: flex;justify-content:center;flex-direction:column;text-align:center;margin:10px;">
 				Monday, August 29
 				<h2>Good afternoon, Alejandra</h2>
 				<div>
-					<div style="display:flex; flex-direction: row;justify-content:center;">
+					<div id="recap-bar" style="display:flex; flex-direction: row;justify-content:center;">
 						<div>My week</div>
 						<div>0 tasks completed</div>
 						<div>0 collaborators</div>
@@ -77,18 +78,55 @@
 					<div>Customize</div>
 				</div>
 			</div>
-			<div>
-				<div style="display:flex;justify-content:center;">
+
+			<div style="display:flex;justify-content:center;">
+				<div style="display:flex;flex-direction:column;">
 					<div class="card" style="margin: 10px;">
-						<div>My Priorities</div>
-						GHGH
+						<div id = "card-header" style="padding: 20px;">
+							<h5>My Priorities</h5>
+							<div style="display:flex;font-size:small;width:200px;justify-content:space-between;">
+								<div>Upcoming</div>
+								<div>Overdue</div>
+								<div>Completed</div>
+							</div>
+						</div>
+						<hr>
+						<div>
+							<ul style="list-style-type:none;padding:20px">
+								<li class="muted"><span class="material-icons">check_circle</span>Click here to add a task</li>
+								<hr style="margin: 10px 0">
+								<li><span class="material-icons">check_circle</span>Click here to add a task</li>
+								<hr style="margin: 10px 0">
+								<li><span class="material-icons">check_circle</span>Click here to add a task</li>
+								<hr style="margin: 10px 0">
+								<li><span class="material-icons">check_circle</span>Click here to add a task</li>
+								<hr style="margin: 10px 0">
+							</ul>
+						</div>
 					</div>
 					<div class="card" style="margin: 10px;">
-						FDGFG
+						<div id = "card-header" style="padding: 10px;">
+							<div style="display: flex;align-items:baseline;"><h5 style="margin-right: 20px">Projects</h5><small>Recents</small></div>
+						</div>
+						<div style = "display:flex;">
+							<div style = "display:flex;flex-direction:column;width:300px;">
+								<div style = "display:flex;align-items:center" class="muted"><div class="project"></div>Create Project</div>
+								<div><div class="project"></div></div>
+								<div><div class="project"></div></div>
+								<div><div class="project"></div></div>
+							</div>
+							<div style = "display:flex;flex-direction:column;width:300px">
+								<div style = "display:flex;align-items:center"><div class="project"></div></div>
+								<div><div class="project"></div></div>
+								<div><div class="project"></div></div>
+								<div><div class="project"></div></div>
+							</div>
+							
+						</div>
 					</div>
 				</div>
 				<div class="card" style="display:flex;justify-content:center;">
-					dffdf
+					
 				</div>
 			</div>
 		</div>

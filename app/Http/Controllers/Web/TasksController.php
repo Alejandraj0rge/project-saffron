@@ -9,10 +9,10 @@ class TasksController extends Controller
 {
     public function index()
     {
-        $tasks = Tasks::orderBy('id', 'desc')
+/*         $tasks = Tasks::orderBy('id', 'desc')
                 ->get();
-
-        return view('tasks.dashboard', compact('tasks'));
+ */
+        return view('tasks.dashboard', /* compact('tasks') */);
     }
 
     public function show(Tasks $task)
