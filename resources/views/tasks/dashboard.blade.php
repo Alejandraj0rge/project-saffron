@@ -66,14 +66,16 @@
 				</div>
 			</div>
 
-			<div style="display: flex;justify-content:center;flex-direction:column;text-align:center;margin:10px;">
+			<div style="display: flex;justify-content:center;flex-direction:column;text-align:center;">
 				Monday, August 29
 				<h2>Good afternoon, Alejandra</h2>
-				<div>
-					<div id="recap-bar" style="display:flex; flex-direction: row;justify-content:center;">
-						<div>My week</div>
-						<div>0 tasks completed</div>
-						<div>0 collaborators</div>
+				<div style="display:flex;justify-content:center;flex-direction: column;">
+					<div>
+						<div id="recap-bar">
+							<div style="margin-right:20px;">My week</div>
+							<div style="margin-right:20px;">0 tasks completed</div>
+							<div>0 collaborators</div>
+						</div>
 					</div>
 					<div>Customize</div>
 				</div>
@@ -125,8 +127,28 @@
 						</div>
 					</div>
 				</div>
-				<div class="card" style="display:flex;justify-content:center;">
-					
+				<div class="card" style="display:flex;justify-content:start;">
+					<div style="display: flex;padding:20px">
+						<div>Today <h3>Monday, 22 March</h3></div>
+						<span class="material-icons">expand_more</span>
+					</div>
+					<div style="display: flex">
+						<div class="card" style="padding: 5px;margin:10px;">SUN<h2>21</h2></div>
+						<div class="card" style="padding: 5px;margin:10px;">MON<h2>22</h2></div>
+						<div class="card" style="padding: 5px;margin:10px;">TUS<h2>23</h2></div>
+						<div class="card" style="padding: 5px;margin:10px;">TUR<h2>24</h2></div>
+					</div>
+					<div style="display: flex;justify-content:space-between;padding:20px">
+						<div style="display: flex;flex-direction:column;justify-content:space-between">
+							<div>00:00</div>
+							<div>12:00</div>
+						</div>
+						<div style="display:flex;flex-direction:column;justify-content:flex-start;">
+							<div>Please Change</div>
+							<div>Please Change</div>
+							<div>Please Change</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
