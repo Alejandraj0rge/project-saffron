@@ -61,8 +61,8 @@
 				<h4>Home</h4>
 				<div>
 					<input type="text" placeholder="Search">
-					<button>Upgrade</button>
-					<button>+</button>
+					<button id="button">Upgrade</button>
+					<button id="plus-button">+</button>
 				</div>
 			</div>
 
@@ -127,26 +127,54 @@
 						</div>
 					</div>
 				</div>
-				<div class="card" style="display:flex;justify-content:start;">
+				<div class="card" style="display:flex;justify-content:start;margin:10px">
 					<div style="display: flex;padding:20px">
 						<div>Today <h3>Monday, 22 March</h3></div>
 						<span class="material-icons">expand_more</span>
 					</div>
-					<div style="display: flex">
+					<div style="display: flex; justify-content:center">
 						<div class="card" style="padding: 5px;margin:10px;">SUN<h2>21</h2></div>
 						<div class="card" style="padding: 5px;margin:10px;">MON<h2>22</h2></div>
 						<div class="card" style="padding: 5px;margin:10px;">TUS<h2>23</h2></div>
 						<div class="card" style="padding: 5px;margin:10px;">TUR<h2>24</h2></div>
 					</div>
-					<div style="display: flex;justify-content:space-between;padding:20px">
+					<div style="display: flex;padding:20px">
 						<div style="display: flex;flex-direction:column;justify-content:space-between">
 							<div>00:00</div>
-							<div>12:00</div>
+							<div>01:00</div>
 						</div>
-						<div style="display:flex;flex-direction:column;justify-content:flex-start;">
-							<div>Please Change</div>
-							<div>Please Change</div>
-							<div>Please Change</div>
+						<div id="calendar-event" class ="green-event" >
+							<div style="margin-left:10px;">
+								<div>Please Change</div>
+								<div>Please Change</div>
+								<div>Please Change</div>
+							</div>
+						</div>
+					</div>
+					<div style="display: flex;padding:20px">
+						<div style="display: flex;flex-direction:column;justify-content:space-between">
+							<div>01:00</div>
+							<div>02:00</div>
+						</div>
+						<div id="calendar-event" class ="yellow-event">
+							<div style="margin-left:10px;">
+								<div>Please Change</div>
+								<div>Please Change</div>
+								<div>Please Change</div>
+							</div>
+						</div>
+					</div>
+					<div style="display: flex;padding:20px">
+						<div style="display: flex;flex-direction:column;justify-content:space-between">
+							<div>02:00</div>
+							<div>03:00</div>
+						</div>
+						<div id="calendar-event" class ="blue-event">
+							<div style="margin-left:10px;">
+								<div>Please Change</div>
+								<div>Please Change</div>
+								<div>Please Change</div>
+							</div>
 						</div>
 					</div>
 				</div>
