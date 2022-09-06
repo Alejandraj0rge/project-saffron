@@ -83,7 +83,35 @@ hr{
 #plus-button{
     padding:10px;
     border-radius: 20px;
+    width: 35px;
+    height: 35px;
     align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #3092EA;
+    font-size: 30px;
+}
+
+#search-task {
+    outline-style: none;
+    font-size: small;
+}
+
+.shadow {
+    -webkit-filter: drop-shadow( 4px 4px 5px rgba(255, 255, 255, 0.644));
+    filter: drop-shadow( 4px 4px 5px rgba(255, 255, 255, 0.712));
+}
+
+#blob {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+[contenteditable] {
+    outline: 0px solid transparent;
 }
 
  
