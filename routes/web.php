@@ -9,7 +9,7 @@ Route::namespace('Web')->name('web.')->group(function() {
         'index', 'show'
     ]);
 
-    Route::namespace('Auth')->group( function(){
+    Route::namespace('Auth')->group( function() {
         Route::get('login', 'LoginController@login');
     });
 });

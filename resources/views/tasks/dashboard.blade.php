@@ -102,11 +102,11 @@
 							<ul style="list-style-type:none;padding:20px">
 								<li class="muted" style="align-items: center;display:flex;"><span class="material-icons" style="margin-right:5px;">check_circle</span><p contenteditable="true" style="margin:0;outline: 0px solid transparent;">Click here to add a task</p></li>
 								<hr style="margin: 10px 0">
-								<li><span style="margin-right:5px;" class="material-icons">check_circle</span>Click here to add a task</li>
+								<li><span style="margin-right:5px;" class="material-icons check-circle">check_circle</span>Click here to add a task</li>
 								<hr style="margin: 10px 0">
-								<li><span style="margin-right:5px;" class="material-icons">check_circle</span>Click here to add a task</li>
+								<li><span style="margin-right:5px;" class="material-icons check-circle">check_circle</span>Click here to add a task</li>
 								<hr style="margin: 10px 0">
-								<li><span style="margin-right:5px;" class="material-icons">check_circle</span>Click here to add a task</li>
+								<li><span style="margin-right:5px;" class="material-icons check-circle">check_circle</span>Click here to add a task</li>
 								<hr style="margin: 10px 0">
 							</ul>
 						</div>
@@ -117,7 +117,9 @@
 						</div>
 						<div style = "display:flex;">
 							<div style = "display:flex;flex-direction:column;width:300px;">
-								<div style = "display:flex;align-items:center" class="muted"><div class="project"></div>Create Project</div>
+								<div style = "display:flex;align-items:center" class="muted"><div class="project"><span class="material-icons">
+									add
+									</span></div>Create Project</div>
 								<div><div class="project"></div></div>
 								<div><div class="project"></div></div>
 								<div><div class="project"></div></div>

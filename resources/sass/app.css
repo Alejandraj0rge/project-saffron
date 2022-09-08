@@ -8,6 +8,7 @@ li{
     display:flex;
     margin-top: 10px;
     font-size: small;
+    overflow-wrap: break-word;
 }
 
 hr{
@@ -45,6 +46,9 @@ hr{
     border-radius: 5px;
     background-color:cornflowerblue;
     margin: 10px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
 }
 
 #calendar-event {
@@ -114,4 +118,3 @@ hr{
     outline: 0px solid transparent;
 }
 
- 
