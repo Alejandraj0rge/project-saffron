@@ -51,7 +51,7 @@ form {
 
 
  svg {
-    position: relative;
+    position: absolute;
     left: 35%;
     top: 10%;
     /* z-index: 1; */ 

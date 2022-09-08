@@ -1954,8 +1954,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context.next = 2;
                 return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('api/login', {
-                  'email': email,
-                  'password': password
+                  'email': _this.email,
+                  'password': _this.password
                 });
 
               case 2:
@@ -2133,7 +2133,7 @@ var render = function render() {
       "justify-content": "center",
       "flex-direction": "column"
     }
-  }, [_c("div", [_c("h1", [_vm._v("Log in!")]), _vm._v(" "), _c("label", [_vm._v("Password")]), _vm._v(" "), _c("input", {
+  }, [_c("div", [_c("h1", [_vm._v("Log in!")]), _vm._v(" "), _c("label", [_vm._v("Password")]), _vm._v("\n            " + _vm._s(_vm.password) + "\n            "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -2152,7 +2152,7 @@ var render = function render() {
         _vm.password = $event.target.value;
       }
     }
-  }), _vm._v(" "), _c("label", [_vm._v("Email")]), _vm._v(" "), _c("input", {
+  }), _vm._v(" "), _c("label", [_vm._v("Email")]), _vm._v("\n            " + _vm._s(_vm.email) + "\n            "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",

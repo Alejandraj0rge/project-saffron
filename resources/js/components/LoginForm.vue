@@ -4,8 +4,10 @@
             <div>
                 <h1>Log in!</h1>
                 <label>Password</label>
+                {{password}}
                 <input v-model="password" placeholder="password"/>
                 <label>Email</label>
+                {{email}}
                 <input v-model="email" placeholder="email"/>
             </div>
             <div style="justify-content: end;display:flex;margin:10px"><small>Remember me</small><input type="checkbox"></div> 
@@ -39,8 +41,8 @@
         methods: {
             async logIn() {
                 this.login = await axios.post('api/login', {
-                    'email': email,
-                    'password': password
+                    'email': this.email,
+                    'password': this.password
                 })
             }
         }
