@@ -22,6 +22,7 @@ Vue.component('top-header', require('./components/Header.vue').default);
 Vue.component('main-card', require('./components/MainCard.vue').default);
 Vue.component('side-menu', require('./components/SideMenu.vue').default);
 Vue.component('login-form', require('./components/LoginForm.vue').default);
+Vue.component('task-card', require('./components/TaskCard.vue').default);
 
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);

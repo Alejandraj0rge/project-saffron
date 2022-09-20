@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\TasksController;
 use Illuminate\Support\Facades\Route;
 
 // Route::resource('tasks', 'TasksController')->only([
@@ -9,6 +10,8 @@ use Illuminate\Support\Facades\Route;
 // Route::post('/tasks/{task}/toggle-completed','TasksController@toggleCompleted')->name('tasks.toggle-completed');
 Route::namespace('Api')->group(function(){
 
+    Route::resource('tasks', 'TasksController');
+    
     Route::namespace('Auth')->group(function(){
         Route::post('login','LoginController@login')->name('login');
     });

@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Document</title>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
 	<link href="\project_saffron\resources\sass\app.css" rel="stylesheet">
-
-	
 </head>
 <body>
     <h1 id="header"></h1>
@@ -21,39 +20,7 @@
 
     <div id="app" style="display: flex;">
 
-		<div id="side-bar" class="shadow bg-body rounded" style="display: flex;flex-direction:column;align-items:flex-start;height:99vh;width:250px;justify-content:space-between;">
-			<div style="width:100%;" id="menu">
-				<div id="title" style="justify-content: space-between;display:flex;width:100%;padding:20px;align-items:center;">Title <span class="material-icons" style="">menu</span></div>
-				<div>
-					<ul style="list-style-type:none;align-items:flex-start;display:flex;flex-direction:column;font:medium;">
-						<li><span class="material-icons">home</span>Home</li>
-						<li><span class="material-icons">star</span>My Tasks</li>
-						<li><span class="material-icons">notifications</span>Inbox</li>
-						<li><span class="material-icons">query_stats</span>Reporting</li>
-						<li><span class="material-icons">emoji_objects</span>Portfolios</li>
-						<li><span class="material-icons">emoji_nature</span>Goals</li>
-					</ul>
-				</div>
-				<hr>
-					<div style="padding-left:2rem;margin: 1rem 0;">Favorites</div>
-				<hr>
-					<div style="padding-left:2rem;margin: 1rem 0;">saved searches</div>
-				<hr>
-					<div style="padding-left:2rem;margin: 1rem 0;">teams</div>
-				<hr>
-					<div style="padding-left:2rem;margin: 1rem 0;">Browse teams</div>
-
-			</div>
-
-			<div style="width:100%;">
-				<hr>
-					<div style="padding-left:2rem;margin: 1rem 0;">Invite teammates</div>
-				<hr>
-					<div style="padding-left:2rem;margin: 1rem 0;">Help</div>
-				<hr>
-			</div>
-			
-		</div>
+		<side-menu v-bind:tasks='{!! $tasks !!}'></side-menu>
 
 		<div id="main" style="width:100%;margin-left:20px;margin-right:20px;">
 			
@@ -88,38 +55,14 @@
 
 			<div style="display:flex;justify-content:center;">
 				<div style="display:flex;flex-direction:column;">
-					<div class="card" style="margin: 10px;">
-						<div id = "card-header" style="padding: 20px;">
-							<h5>My Priorities</h5>
-							<div style="display:flex;font-size:small;width:200px;justify-content:space-between;">
-								<div>Upcoming</div>
-								<div>Overdue</div>
-								<div>Completed</div>
-							</div>
-						</div>
-						<hr>
-						<div>
-							<ul style="list-style-type:none;padding:20px">
-								<li class="muted" style="align-items: center;display:flex;"><span class="material-icons" style="margin-right:5px;">check_circle</span><p contenteditable="true" style="margin:0;outline: 0px solid transparent;">Click here to add a task</p></li>
-								<hr style="margin: 10px 0">
-								<li><span style="margin-right:5px;" class="material-icons check-circle">check_circle</span>Click here to add a task</li>
-								<hr style="margin: 10px 0">
-								<li><span style="margin-right:5px;" class="material-icons check-circle">check_circle</span>Click here to add a task</li>
-								<hr style="margin: 10px 0">
-								<li><span style="margin-right:5px;" class="material-icons check-circle">check_circle</span>Click here to add a task</li>
-								<hr style="margin: 10px 0">
-							</ul>
-						</div>
-					</div>
+					<task-card v-bind:tasks='{!! $tasks !!}'></task-card>
 					<div class="card" style="margin: 10px;">
 						<div id = "card-header" style="padding: 10px;">
 							<div style="display: flex;align-items:baseline;"><h5 style="margin-right: 20px">Projects</h5><small>Recents</small></div>
 						</div>
 						<div style = "display:flex;">
-							<div style = "display:flex;flex-direction:column;width:300px;">
-								<div style = "display:flex;align-items:center" class="muted"><div class="project"><span class="material-icons">
-									add
-									</span></div>Create Project</div>
+							<div  style = "display:flex;flex-direction:column;width:300px;">
+								<div style = "display:flex;align-items:center" class="muted"><div class="project"><span class="material-icons">add</span></div>Create Project</div>
 								<div><div class="project"></div></div>
 								<div><div class="project"></div></div>
 								<div><div class="project"></div></div>
@@ -140,10 +83,10 @@
 						<span class="material-icons">expand_more</span>
 					</div>
 					<div style="display: flex; justify-content:center">
-						<div class="card" style="padding: 5px;margin:10px;">SUN<h2>21</h2></div>
-						<div class="card" style="padding: 5px;margin:10px;">MON<h2>22</h2></div>
-						<div class="card" style="padding: 5px;margin:10px;">TUS<h2>23</h2></div>
-						<div class="card" style="padding: 5px;margin:10px;">TUR<h2>24</h2></div>
+						<div class="card date-card" style="padding: 5px;margin:10px;">SUN<h2>21</h2></div>
+						<div class="card date-card" style="padding: 5px;margin:10px;">MON<h2>22</h2></div>
+						<div class="card date-card" style="padding: 5px;margin:10px;">TUS<h2>23</h2></div>
+						<div class="card date-card" style="padding: 5px;margin:10px;">TUR<h2>24</h2></div>
 					</div>
 					<div style="display: flex;padding:20px">
 						<div style="display: flex;flex-direction:column;justify-content:space-between">

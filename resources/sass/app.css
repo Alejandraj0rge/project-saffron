@@ -11,6 +11,12 @@ li{
     overflow-wrap: break-word;
 }
 
+li:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    width: 100%;
+}
+
 hr{
     width: 100%;
     margin: 0;
@@ -19,6 +25,19 @@ hr{
 #menu{
     font-size: small;
 }
+
+#side-bar{
+    transition: 0.5s;
+    display: flex;
+    flex-direction:column;
+    align-items:flex-start;
+    height:99vh;width:250px;
+    justify-content:space-between;
+}
+
+@media screen and (max-height: 450px) {
+    #side-bar {padding-top: 15px;}
+ }
 
 #title {
     justify-content: space-between;
@@ -37,7 +56,14 @@ hr{
 }
 
 .muted{
-    color: gray;
+    opacity: 0.5;
+}
+
+#task-status-bar{
+    display:flex;
+    font-size:small;
+    width:200px;
+    justify-content:space-between;
 }
 
 .project{
@@ -51,12 +77,22 @@ hr{
     justify-content: center;
 }
 
+.task-status:hover{
+    text-decoration: solid underline black 2px;
+    cursor: pointer;
+}
+
 #calendar-event {
     display:flex;
     flex-direction:column;
     justify-content:flex-start;
     width: 100%;
     margin-left: 10px;
+    cursor:pointer;
+}
+
+#calendar-event:hover {
+    opacity: 0.9;
 }
 
 .green-event {
@@ -118,3 +154,15 @@ hr{
     outline: 0px solid transparent;
 }
 
+.date-card:hover {
+    background-color:#8ebae0;
+    cursor: pointer;
+}
+
+#add-task-text {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    height: 30px;
+}

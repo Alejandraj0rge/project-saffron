@@ -7,16 +7,23 @@ use App\Models\Tasks;
 
 class TasksController extends Controller
 {
+    public function __construct()
+    {
+    }
+    
     public function index()
     {
-/*         $tasks = Tasks::orderBy('id', 'desc')
-                ->get();
- */
-        return view('tasks.dashboard', /* compact('tasks') */);
+        $tasks = Tasks::all()->toJson();
+        return view('tasks.dashboard', compact('tasks'));
     }
 
     public function show(Tasks $task)
     {
         return view('tasks.show', compact('task'));
+    }
+
+    public function calendar()
+    {
+
     }
 }

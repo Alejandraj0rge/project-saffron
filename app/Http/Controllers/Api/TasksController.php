@@ -10,21 +10,16 @@ class TasksController extends Controller
 {
     public function store(Request $request)
     {
-        $data = $request->validate([
-            'title' => 'required|string|max:255',
-            'content' => 'required|string',
-        ]);
+        $task = Tasks::create($request->all());
 
-        $task = Tasks::create($data);
-
-        return response()->json(['data' => $task], 201);
+        return response()->json($task);
     }
 
     public function index()
     {
         $task = Tasks::all();
 
-        return response()->json(['data' => $task]);
+        return response()->json($task);
     }
 
     public function update(Request $request, Tasks $task)
@@ -34,18 +29,5 @@ class TasksController extends Controller
         $task->update($data);
 
         return response()->json(['data' => $task]);
-    }
-
-    public function toggleCompleted(Tasks $task)
-    {
-        $task->update([ 
-            'completed' => ! $task->completed
-        ]);
-
-        return response()->json(['data' => 
-            [
-                'completed' => $task->completed
-            ]
-        ]);
     }
 }

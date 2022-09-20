@@ -7,8 +7,6 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Password;
-use Symfony\Component\Console\Input\Input;
 
 class LoginController extends Controller
 {
@@ -19,12 +17,15 @@ class LoginController extends Controller
             'email' => ['required']
         ]);
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
- 
-            return redirect()->intended('/tasks');
+        if (Auth::guard('web')->attempt($credentials)) {
+/*             Session::regenerate();
+            return redirect()->route('web.tasks.index'); */
+
+            return response()->json([
+                'url' => route('web.tasks.index')
+            ]);
         }
-        dd('no, didnt log on');
+
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
@@ -41,6 +42,6 @@ class LoginController extends Controller
         $credentials['password'] = Hash::make($credentials['password']);    
         User::create($credentials);
         
-        return redirect('login');
+        return redirect('web.login');
     }
 }

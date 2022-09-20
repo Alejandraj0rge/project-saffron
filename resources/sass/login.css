@@ -31,29 +31,65 @@ form {
 }
  */
 
- form {
+#form {
     position: relative; 
     width: 200px;
     z-index: 10;
     left:45%;
     top:230px;
     font-family: Arial, Helvetica, sans-serif;
- }
+}
 
- input{
+input{
 
     padding:10px;
     background-color: transparent;
     color:blue;
     border-radius: 20px;
     border-style: solid 1;
- }
+}
 
 
- svg {
+svg {
     position: absolute;
     left: 35%;
     top: 10%;
     /* z-index: 1; */ 
- }
- 
+}
+
+#modal-task-detail{
+    padding: 20px;
+    width: 500px;
+    height: 500px;
+}
+
+#modal-task-detail  > * {
+    display: flex;
+    justify-content:start;
+    flex-direction:column;
+}
+
+table {
+    border-collapse: collapse;
+}
+  
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    width: 100%;
+}
+
+tr{
+    display:flex;
+}
+
+#chain-options{
+    display: flex;
+}
+
+#chain-options > *{
+    padding: 10px;
+    text-decoration: underline solid 2px blue;
+    text-underline-offset: 5px;
+}
