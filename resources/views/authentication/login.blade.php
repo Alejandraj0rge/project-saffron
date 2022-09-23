@@ -43,7 +43,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Label</td><td>Style Guide</td><td>Design Guide</td><td>+Add Label</td>
+                <td>Label</td><td><div class="label blue">Style Guide</div></td><td><div class="label green">Design Guide</div></td><td><div class="label yellow">+Add Label</div></td>
             </tr>
         </table>
         <div>
@@ -52,12 +52,33 @@
             </div>
             <div style="padding:20px;">
                 <div>
-                    <textarea placeholder="Write your comment here :)" id="content-comment">content</textarea>
-                    <div>
+                    <textarea id='start-comment' placeholder="Write your comment here :)">content</textarea>
+                    <div style="justify-content: end;display: flex;">
                         <span class="material-icons">key</span><span class="material-icons">keyboard_voice</span><button>Publish</button>
                     </div>
                 </div>
-                <div class="comment"></div>
+                <div class="comment">
+                    <div class="comment-header" style="display: flex;align-items:baseline">
+                        <div>picture</div>
+                        <h4 style="padding-left:15px">Nike Sequent</h4>
+                        <div style="padding-left:5px" class="muted small">3 hours ago</div>
+                    </div>
+                    <div class="comment-content">
+                        <div>Who dat dog <a>@MichaelJackson</a></div>
+                        <div style="display:flex;align-items:baseline;"><span style="padding-right:5px;" class="material-icons">handshake</span><button>Reply</button></div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="comment-header" style="display: flex;align-items:baseline">
+                        <div>picture</div>
+                        <h4 style="padding-left:15px">Nike Sequent</h4>
+                        <div style="padding-left:5px" class="muted small">3 hours ago</div>
+                    </div>
+                    <div class="comment-content">
+                        <div>Who dat dog <a>@MichaelJackson</a></div>
+                        <div style="display:flex;align-items:baseline;"><span style="padding-right:5px;" class="material-icons">handshake</span><button>Reply</button></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
