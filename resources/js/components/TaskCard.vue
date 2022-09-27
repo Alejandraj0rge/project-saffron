@@ -51,7 +51,7 @@
                 });
 
                 console.log(this.taskList);
-                this.taskList = this.getTaskHtml(res.data.title) + this.taskList;
+                // this.taskList = this.getTaskHtml(res.data.title) + this.taskList;
                 
             },
             createTask(content){
