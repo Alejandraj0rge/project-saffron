@@ -2051,14 +2051,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
     var tasksHtml = "";
     this.tasks.forEach(function (task) {
-      tasksHtml += _this.getTaskHtml(task.title);
+      tasksHtml += _this.createTask(task.title);
     });
     return {
       taskList: tasksHtml
     };
   },
   methods: {
-    addTask: function addTask(event) {
+    storeTask: function storeTask(event) {
       var _this2 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
@@ -2092,8 +2092,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee);
       }))();
     },
-    getTaskHtml: function getTaskHtml(content) {
+    createTask: function createTask(content) {
       return "<li><span style=\"margin-right:5px;\" class=\"material-icons check-circle\">check_circle</span>".concat(content, "</li><hr style=\"margin: 10px 0\">");
+    },
+    completeTask: function completeTask(event) {
+      event.target.style.backgroundColor = white;
+      console.log();
     }
   },
   props: ['tasks']
@@ -2537,19 +2541,10 @@ var render = function render() {
     }
   }, [_c("li", {
     staticClass: "muted",
-    staticStyle: {
-      "align-items": "center",
-      display: "flex"
-    },
     attrs: {
       id: "add-task"
     }
-  }, [_c("span", {
-    staticClass: "material-icons",
-    staticStyle: {
-      "margin-right": "5px"
-    }
-  }, [_vm._v("check_circle")]), _vm._v(" "), _c("div", {
+  }, [_c("span", [_vm._v("check_circle")]), _vm._v(" "), _c("div", {
     staticStyle: {
       margin: "0",
       outline: "0px solid transparent",
@@ -2565,7 +2560,7 @@ var render = function render() {
       keyup: function keyup($event) {
         if (!$event.type.indexOf("key") && _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")) return null;
         return function (e) {
-          return _vm.addTask(e);
+          return _vm.storeTask(e);
         }.apply(null, arguments);
       }
     }
@@ -2573,11 +2568,24 @@ var render = function render() {
     staticStyle: {
       margin: "10px 0"
     }
-  }), _vm._v(" "), _c("span", {
-    domProps: {
-      innerHTML: _vm._s(_vm.taskList)
-    }
-  })])])]);
+  }), _vm._v(" "), _vm._l(_vm.tasks, function (item, index) {
+    return _c("div", [_c("li", {
+      on: {
+        click: function click(e) {
+          return _vm.completeTask(e);
+        }
+      }
+    }, [_c("span", {
+      staticClass: "material-icons check-circle",
+      staticStyle: {
+        "margin-right": "5px"
+      }
+    }, [_vm._v("check_circle")]), _vm._v(_vm._s(item.content))]), _c("hr", {
+      staticStyle: {
+        margin: "10px 0"
+      }
+    })]);
+  })], 2)])]);
 };
 
 var staticRenderFns = [function () {

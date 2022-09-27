@@ -166,3 +166,8 @@ hr{
     outline: none;
     height: 30px;
 }
+
+#add-task {
+    align-items: center;
+    display:flex;
+}

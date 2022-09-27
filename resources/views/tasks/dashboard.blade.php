@@ -73,7 +73,6 @@
 								<div><div class="project"></div></div>
 								<div><div class="project"></div></div>
 							</div>
-							
 						</div>
 					</div>
 				</div>

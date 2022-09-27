@@ -11,11 +11,14 @@
         <hr>
         <div  style="height: 200px;overflow-y: scroll;">
             <ul style="list-style-type:none;padding:20px">
-                <li class="muted" id="add-task" style="align-items: center;display:flex;"><span class="material-icons" style="margin-right:5px;">check_circle</span>
+                <li class="muted" id="add-task"><span>check_circle</span>
                     <div id="add-task-text" rows="1" contenteditable="true" maxlength="80" style="margin:0;outline: 0px solid transparent;width:100%" @keyup.enter="(e) => storeTask(e)">Click here to add a task</div>
                 </li>
                 <hr style="margin: 10px 0">
-                <span v-html="taskList"></span>
+                <div v-for="(item, index) in tasks">
+                    <li @click="(e) => completeTask(e)"><span style="margin-right:5px;" class="material-icons check-circle">check_circle</span>{{item.content}}</li><hr style="margin: 10px 0">
+                </div>
+                <!-- <span v-html="taskList"></span> -->
             </ul>
         </div>
     </div>
@@ -53,6 +56,10 @@
             },
             createTask(content){
                 return `<li><span style="margin-right:5px;" class="material-icons check-circle">check_circle</span>${content}</li><hr style="margin: 10px 0">`;
+            },
+            completeTask(event){
+                event.target.style.backgroundColor = white;
+                console.log();
             }
         },
         props: ['tasks']

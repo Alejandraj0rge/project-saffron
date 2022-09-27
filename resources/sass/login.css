@@ -49,92 +49,9 @@ input{
     border-style: solid 1;
 }
 
-
 svg {
     position: absolute;
     left: 35%;
     top: 10%;
     /* z-index: 1; */ 
-}
-
-#modal-task-detail{
-    padding: 20px;
-    width: 500px;
-    height: 500px;
-}
-
-#modal-task-detail  > * {
-    display: flex;
-    justify-content:start;
-    flex-direction:column;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-#details-table {
-    border: none;
-}
-  
-td {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-    width: 100%;
-}
-
-tr{
-    display:flex;
-}
-
-#chain-options{
-    display: flex;
-}
-
-#chain-options > *{
-    padding: 10px;
-    text-decoration: underline solid 2px blue;
-    text-underline-offset: 5px;
-}
-
-.muted{
-    color: gray;
-}
-
-.small{
-    font-size: small;
-}
-
-.comment-content{
-    padding-left: 50px;
-}
-
-#start-comment{
-    width:100%;
-    resize: none;
-    border-radius: 5px;
-    margin: 5px;
-}
-
-.label {
-    font-size: small;
-    border-radius: 10px;
-    text-align: center;
-    width: max-content;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-.blue {
-    background-color: #8ebae0
-}
-
-.green {
-    background-color: #baeccc;
-}
-
-.yellow {
-    background-color: #d6c48c;
 }
