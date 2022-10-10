@@ -19,8 +19,9 @@ class TasksController extends Controller
     {
         $tasks = Tasks::all()->toJson();
         $events = Events::all()->toJson();
-        $events = Projects::all()->toJson();
-        return view('tasks.dashboard', compact('tasks', 'events'));
+        $projects = Projects::all()->toJson();
+     
+        return view('tasks.dashboard', get_defined_vars());
     }
     
     public function index()

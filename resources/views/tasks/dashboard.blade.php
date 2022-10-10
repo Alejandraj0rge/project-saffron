@@ -28,14 +28,4 @@
 				<calendar-bar v-bind:events='{!! $events !!}'></calendar-bar>
 			</div>
 		</div>
-
-{{-- 		<script>
-			const app = new Vue({
-				el: '#app',
-				tasksList: {
-					message: 'You loaded this page on ' + new Date().toLocaleString()
-				}/* ,
-				router: new VueRouter(routes) */
-			});
-		</script> --}}
 	@endsection

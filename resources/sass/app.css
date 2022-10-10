@@ -31,7 +31,7 @@ hr{
     display: flex;
     flex-direction:column;
     align-items:flex-start;
-    height:99vh;width:250px;
+    height:99vh;width:400px;
     justify-content:space-between;
 }
 
@@ -280,6 +280,7 @@ td {
 
 #project-container {
     column-count: 2;
+    break-inside: avoid-column;
     /* display:flex; */
     /* flex-direction:column; */
     width:100%;
