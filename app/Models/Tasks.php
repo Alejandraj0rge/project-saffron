@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tasks extends Model
 {
-   protected $guarded = ['id'];
+	protected $guarded = ['rec_id'];
+	protected $primaryKey = 'rec_id';
 
+	public function Collaborators(){
+		return $this->hasMany(\App\Models\Module\Collaborators::class, 'task_id', 'task_id');
+	}
 }

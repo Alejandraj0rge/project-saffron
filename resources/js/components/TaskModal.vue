@@ -8,28 +8,28 @@
             </ul>
             <h1>The Bear Collective Project</h1>
         </div>
-        <table id="details-table">
-            <tr>
-                <td>Status</td>
-                <td id="label">In progress</td>
-            </tr>
-            <tr>
-                <td>Timeline</td><td>Feb 17, 2022</td>
-            </tr>
-            <tr>
-                <td>Assignee</td>
-                <td>
+        <div style="display:flex;flex-direction: column;">
+            <div style="display:flex;flex-direction: row;padding:5px">
+                <div style="width: 100px;">Status</div>
+                <div id="label">In progress</div>
+            </div>
+            <div style="display:flex;flex-direction: row;padding:5px">
+                <div style="width: 100px;">Timeline</div><div>Feb 17, 2022</div>
+            </div>
+            <div style="display:flex;flex-direction: row;padding:5px">
+                <div style="width: 100px;">Assignee</div>
+                <div>
                     <div>
                         <div></div>
                         <div></div>
                         <div></div>
                     </div>+3 Member
-                </td>
-            </tr>
-            <tr>
-                <td>Label</td><td><div class="label blue">Style Guide</div></td><td><div class="label green">Design Guide</div></td><td><div class="label yellow">+Add Label</div></td>
-            </tr>
-        </table>
+                </div>
+            </div>
+            <div style="display:flex;flex-direction: row;padding:5px">
+                <div style="width: 100px;">Label</div><div><div class="label blue">Style Guide</div></div><div><div class="label green">Design Guide</div></div><div><div class="label yellow">+Add Label</div></div>
+            </div>
+        </div>
         <div>
             <div id="chain-options">
                 <div>Comments</div><div>Description</div><div>Settings</div>

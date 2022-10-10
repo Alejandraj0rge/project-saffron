@@ -23,6 +23,11 @@ Vue.component('main-card', require('./components/MainCard.vue').default);
 Vue.component('side-menu', require('./components/SideMenu.vue').default);
 Vue.component('login-form', require('./components/LoginForm.vue').default);
 Vue.component('task-card', require('./components/TaskCard.vue').default);
+Vue.component('calendar-bar', require('./components/Calendar.vue').default);
+Vue.component('dashboard-header', require('./components/DashboardHeader.vue').default);
+Vue.component('projects-container', require('./components/Projects.vue').default);
+Vue.component('task-modal', require('./components/TaskModal.vue').default);
+
 
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
