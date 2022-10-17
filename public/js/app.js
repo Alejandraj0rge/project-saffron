@@ -2090,7 +2090,8 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     addProject: function addProject(e) {
       // e.target.style.opacity = 1;
-      Document.getElementById('modal-task-detail').style.display = 'block';
+      document.getElementById('modal-task-detail').style.display = 'block';
+      console.log(223);
     }
   },
   props: ['projects']
