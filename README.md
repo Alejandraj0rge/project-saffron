@@ -33,7 +33,7 @@ To run the Task Manager App on your local machine, follow these steps:
 2. **Navigate to the project directory:**
 
    ```
-   cd task-manager-app
+   cd project-saffron
    ```
 
 3. **Install dependencies:**
