@@ -94,15 +94,3 @@ To run the Task Manager App on your local machine, follow these steps:
 ![Screenshot 1](https://user-images.githubusercontent.com/91134535/203548827-f7a88c7a-5b53-4ead-bb96-4deab901bbf8.png)
 ![Screenshot 2](https://user-images.githubusercontent.com/91134535/203551241-2abd61f3-3122-4a03-84cc-083e853ef4f4.png)
 
-## Contributing
-
-Contributions to enhance and expand the functionality of the Task Manager App are encouraged. If you have ideas, suggestions, or find issues, please open an issue or submit a pull request to the [GitHub repository](https://github.com/Alejandraj0rge/project-saffron).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Feel free to adjust and expand this README to match your project's specifics. Add sections related to the current state of development, any known issues, and instructions for potential contributors.
-
